@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import "./App.css";
-import Title from './InfoContainer/Title'
-import Date from './InfoContainer/Date'
-import ImgContainer from './InfoContainer/ImgContainer'
+import InfoCard from './InfoContainer/InfoCard'
+import { Button } from 'reactstrap'
+
 
 function App() {
   const [data, setData] = useState([])
@@ -17,9 +17,7 @@ function App() {
   },[])
   return (
     <div className="App">
-      <Title data = {data}/>
-      <ImgContainer data = {data}/>
-      <Date data = {data}/>
+      <InfoCard data = {data}/>
     </div>
   );
 }
